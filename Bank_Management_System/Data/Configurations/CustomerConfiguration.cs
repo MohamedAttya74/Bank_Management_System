@@ -15,6 +15,11 @@ namespace Bank_Management_System.Data.Configurations
            builder.Property(C => C.customerType)
                     .HasConversion<string>();  // This line configures the customerType property to be stored as a string in the database.
         
+            builder.HasIndex(C => C.NationalId)
+                                .IsUnique();  
+
+
+
             builder.HasMany(C => C.customerAccounts)
                 .WithOne(C => C.customer)
                 .HasForeignKey(C => C.CustomerId)

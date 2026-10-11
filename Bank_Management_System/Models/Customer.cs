@@ -10,6 +10,7 @@ namespace Bank_Management_System.Models
     public class Customer
     {
         public int CustomerId { get; set; }
+        public string NationalId { get; set; }
         public string Address { get; set; }
         public DateOnly DateOfBirth { get; set; }
         public string FullName { get; set; }
@@ -17,7 +18,6 @@ namespace Bank_Management_System.Models
         public string PhoneNumber { get; set; }
 
         public  CustomerType customerType { get; set; }
-        public int NationalId { get; set; }
         public ICollection<CustomerAccount> customerAccounts { get; set; }
 
 
