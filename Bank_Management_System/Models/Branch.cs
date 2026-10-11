@@ -10,6 +10,7 @@ namespace Bank_Management_System.Models
     {
 
         public int BranchId { get; set; }  // PK 
+        public  string Code { get; set; }
         public string BranchName { get; set; }
         public string BranchAddress { get; set; }
         public string PhoneNumber { get; set; }
